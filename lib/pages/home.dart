@@ -10,10 +10,10 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 List categories = [
-  "images/headphone_icon.png",
-  "images/laptop.png",
+  "images/headphone2.png",
+  "images/laptop2.png",
   "images/watch.png",
-  "images/TV.JPG"
+  "images/Tv.png"
 ];
 
 
@@ -105,6 +105,102 @@ List categories = [
                   ),
                 ),
               ],
+            ),
+            SizedBox(height: 20.0),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "All Products", 
+                  style: AppWidget.semiboldTextFieldStyle()
+                ),
+                Text(
+                  "see all", 
+                  style: TextStyle(color: Color(0xFFfd6f3e), fontSize: 18.0, fontWeight: FontWeight.bold)
+                ),
+                
+              ],
+            ),
+            SizedBox(height: 20.0),
+            Container(
+              height: 240,
+              child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(right: 20.0),
+                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Column(children: [
+                      Image.asset("images/watch2.png", height: 150, width: 150, fit: BoxFit.cover,),
+                      Text("Apple Watch", style: AppWidget.semiboldTextFieldStyle(),),
+                      SizedBox(height: 10.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                        Text("\$300", style: TextStyle(color: Color(0xFFfd6f3e), fontSize: 22.0, fontWeight: FontWeight.bold)),
+                        SizedBox(width: 40.0),
+                        Container(
+                          padding: EdgeInsets.all(5.0),
+                          decoration: BoxDecoration(color: Color(0xFFfd6f3e), borderRadius: BorderRadius.circular(7.0)),
+                          child: Icon(Icons.add, color: Colors.white,),
+                          )      
+                      ],)
+                    ])
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 20.0),
+                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Column(children: [
+                      Image.asset("images/headphone.PNG", height: 150, width: 150, fit: BoxFit.cover,),
+                      Text("Headphone", style: AppWidget.semiboldTextFieldStyle(),),
+                      SizedBox(height: 10.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                        Text("\$100", style: TextStyle(color: Color(0xFFfd6f3e), fontSize: 22.0, fontWeight: FontWeight.bold)),
+                        SizedBox(width: 40.0),
+                        Container(
+                          padding: EdgeInsets.all(5.0),
+                          decoration: BoxDecoration(color: Color(0xFFfd6f3e), borderRadius: BorderRadius.circular(7.0)),
+                          child: Icon(Icons.add, color: Colors.white,),
+                          )      
+                      ],)
+                    ])
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Column(children: [
+                      Image.asset("images/laptop2.png", height: 150, width: 150, fit: BoxFit.cover,),
+                      Text("Laptop", style: AppWidget.semiboldTextFieldStyle(),),
+                      SizedBox(height: 10.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                        Text("\$1200", style: TextStyle(color: Color(0xFFfd6f3e), fontSize: 22.0, fontWeight: FontWeight.bold)),
+                        SizedBox(width: 40.0),
+                        Container(
+                          padding: EdgeInsets.all(5.0),
+                          decoration: BoxDecoration(color: Color(0xFFfd6f3e), borderRadius: BorderRadius.circular(7.0)),
+                          child: Icon(Icons.add, color: Colors.white,),
+                          )      
+                      ],)
+                    ])
+                  ),
+                ]
+              ),
             )
           ],
         ),

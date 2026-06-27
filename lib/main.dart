@@ -1,3 +1,7 @@
+import 'package:ecommerce_app/pages/bottomnav.dart';
+import 'package:ecommerce_app/pages/login.dart';
+import 'package:ecommerce_app/pages/product_detail.dart';
+import 'package:ecommerce_app/pages/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/pages/home.dart';
 
@@ -18,7 +22,7 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.deepPurple,
         ),
       ),
-      home: const HomePage(),
+      home: SignUp(),
     );
   }
 }
