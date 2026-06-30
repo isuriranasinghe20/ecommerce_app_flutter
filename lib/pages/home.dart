@@ -22,7 +22,7 @@ List categories = [
     return Scaffold(
       backgroundColor: Color(0xfff2f2f2),
       body: Container(
-        margin: EdgeInsets.only(top:30.0, left: 20.0, right: 20.0),
+        margin: EdgeInsets.only(top:60.0, left: 20.0, right: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -90,7 +90,7 @@ List categories = [
                 ),
 
                 Expanded(
-                  child: Container(
+                  child: SizedBox(
                     height: 130,
                     child: ListView.builder(
                       padding: EdgeInsets.zero,
@@ -122,7 +122,7 @@ List categories = [
               ],
             ),
             SizedBox(height: 20.0),
-            Container(
+            SizedBox(
               height: 240,
               child: ListView(
                 shrinkWrap: true,
@@ -211,7 +211,7 @@ List categories = [
 
 class CategoryTile extends StatelessWidget {
   String image;
-  CategoryTile({required this.image});
+  CategoryTile({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {

@@ -1,11 +1,11 @@
-import 'package:ecommerce_app/pages/bottomnav.dart';
-import 'package:ecommerce_app/pages/login.dart';
-import 'package:ecommerce_app/pages/product_detail.dart';
+import 'package:ecommerce_app/Admin/admin_login.dart';
 import 'package:ecommerce_app/pages/signup.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerce_app/pages/home.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.deepPurple,
         ),
       ),
-      home: SignUp(),
+      home: AdminLogin(),
     );
   }
 }

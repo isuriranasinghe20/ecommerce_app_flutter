@@ -1,8 +1,10 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+    
 
 android {
     namespace = "com.example.ecommerce_app"
@@ -43,3 +45,15 @@ kotlin {
 flutter {
     source = "../.."
 }
+
+dependencies {
+    // Import the BoM
+    implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
+
+    // Add the dependency for Google Analytics (highly recommended)
+    implementation("com.google.firebase:firebase-analytics")
+
+    // Add any other Firebase libraries you need here, for example:
+    // implementation("com.google.firebase:firebase-auth")
+}
+
