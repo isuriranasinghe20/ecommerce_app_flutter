@@ -1,5 +1,6 @@
-import 'package:ecommerce_app/Admin/admin_login.dart';
-import 'package:ecommerce_app/pages/signup.dart';
+import 'package:ecommerce_app/Admin/add_product.dart';
+import 'package:ecommerce_app/pages/bottomnav.dart';
+import 'package:ecommerce_app/pages/product_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.deepPurple,
         ),
       ),
-      home: AdminLogin(),
+      home: BottomNav(),
     );
   }
 }

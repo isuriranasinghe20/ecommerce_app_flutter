@@ -8,4 +8,16 @@ class DatabaseMethods{
       .doc(id)
       .set(userInfoMap);
   }
+
+  Future addProduct(Map<String, dynamic> userInfoMap, String categoryname){
+    return FirebaseFirestore.instance
+      .collection(categoryname)
+      .add(userInfoMap);
+  }
+
+  Future<Stream<QuerySnapshot>> getProducts(String category)async{
+    return await FirebaseFirestore.instance
+      .collection(category)
+      .snapshots();
+  }
 }

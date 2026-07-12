@@ -2,7 +2,8 @@ import 'package:ecommerce_app/widget/support_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetail extends StatefulWidget {
-  const ProductDetail({super.key});
+  String image, name, price, detail;
+  ProductDetail({required this.detail, required this.image, required this.name, required this.price});
 
   @override
   State<ProductDetail> createState() => _ProductDetailState();
